@@ -52,7 +52,7 @@ def lambda_handler(event, context):
     base_image = Image.open(BytesIO(response_image))
 
     draw = ImageDraw.Draw(base_image)
-    font_mono= './fonts/NanumGothic.ttf'
+    font_mono= './NanumBarunGothicBold.ttf'
     font = ImageFont.truetype(font_mono, 70)
     
     multiline = wrap_text(question, 900, font)
@@ -61,7 +61,7 @@ def lambda_handler(event, context):
     H = 1920
     white = (255,255,255)
     
-    text_y = (H - len(multiline) * 80)/2 - 500
+    text_y = (H - len(multiline) * 80)/2 - 650
 
     for line in multiline:
         w, h = draw.textsize(line, font=font)

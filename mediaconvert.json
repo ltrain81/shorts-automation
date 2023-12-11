@@ -1,0 +1,81 @@
+{
+    "Category": "Shorts",
+    "Name": "AWSShorts",
+    "Settings": {
+      "TimecodeConfig": {
+        "Source": "ZEROBASED"
+      },
+      "OutputGroups": [
+        {
+          "Name": "File Group",
+          "Outputs": [
+            {
+              "ContainerSettings": {
+                "Container": "MP4",
+                "Mp4Settings": {}
+              },
+              "VideoDescription": {
+                "Width": 1080,
+                "ScalingBehavior": "FILL",
+                "Height": 1920,
+                "CodecSettings": {
+                  "Codec": "H_264",
+                  "H264Settings": {
+                    "MaxBitrate": 5000000,
+                    "RateControlMode": "QVBR",
+                    "SceneChangeDetect": "TRANSITION_DETECTION"
+                  }
+                }
+              },
+              "AudioDescriptions": [
+                {
+                  "AudioSourceName": "Audio Selector 1",
+                  "CodecSettings": {
+                    "Codec": "AAC",
+                    "AacSettings": {
+                      "Bitrate": 96000,
+                      "CodingMode": "CODING_MODE_2_0",
+                      "SampleRate": 48000
+                    }
+                  }
+                }
+              ]
+            }
+          ],
+          "OutputGroupSettings": {
+            "Type": "FILE_GROUP_SETTINGS",
+            "FileGroupSettings": {}
+          }
+        }
+      ],
+      "Inputs": [
+        {
+          "AudioSelectors": {
+            "Audio Selector 1": {
+              "DefaultSelection": "DEFAULT"
+            }
+          },
+          "VideoSelector": {},
+          "TimecodeSource": "ZEROBASED",
+          "Crop": {
+            "Height": 1080,
+            "Width": 1080,
+            "X": 420,
+            "Y": 0
+          },
+          "Position": {
+            "Height": 1080,
+            "Width": 1080,
+            "X": 0,
+            "Y": 420
+          }
+        }
+      ]
+    },
+    "AccelerationSettings": {
+      "Mode": "DISABLED"
+    },
+    "StatusUpdateInterval": "SECONDS_60",
+    "Priority": 0,
+    "HopDestinations": []
+  }

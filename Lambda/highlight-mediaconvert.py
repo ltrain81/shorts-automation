@@ -81,6 +81,8 @@ def create_new_video(video_name, section_index, timeframes):
     background_file = f's3://aws-shorts-source-file/Background/Headers/{video_name}-{section_index}.png'
 
     # Create MediaConvert job
+
+    #need to add Cropping Selection 
     response = mediaconvert.create_job(
         Role='arn:aws:iam::939021814303:role/service-role/MediaConvert_Default_Role',
         JobTemplate='AWSShorts',  # Replace 'Template' with your MediaConvert job template ARN
