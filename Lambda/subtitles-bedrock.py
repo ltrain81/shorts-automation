@@ -46,7 +46,7 @@ def lambda_handler(event, context):
     
 - Need 5 highlights.
 - Don't summarize and just give the response in the original script.
-- Pick out the highlights that depict the most important informative parts of this script. 
+- Pick out the highlights that depict the most important parts of this script. 
 
 - Give it to me in well-formatted JSON as below
 {{
@@ -56,10 +56,9 @@ def lambda_handler(event, context):
     }}
 }}
     
-- Add a rhetorical question in less then 7 words for each highlight in Korean. 
+- Add a rhetorical question for each highlight in Korean. Less than 7 words.
 - One Highlight should have more than 200 words.
 - Never change a single letter or order of words from the orginal script
-    
 \n\nAssistant:""", "max_tokens_to_sample": 3000,
         "temperature": 0, "top_p": 0, "top_k": 250, "stop_sequences":  ["\n\nHuman:"],
         }, ensure_ascii=False )
